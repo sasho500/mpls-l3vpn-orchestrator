@@ -1,0 +1,12 @@
+devices:
+  R1:
+    platform: iosxe
+    host: 10.125.0.81
+
+  R2:
+    platform: iosxr
+    host: 10.125.0.82
+
+  R3:
+    platform: iosxe
+    host: 10.125.0.83

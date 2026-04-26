@@ -1,0 +1,32 @@
+vrfs:
+  - name: POLICE
+    devices: ["R1", "R2"]
+    rd: "65000:1"
+    description: "POLICE DEPARTMENT"
+    route_targets:
+      import:
+        - "65000:1"
+      export:
+        - "65000:1"
+
+  - name: CHEMICAL
+    devices: ["R1", "R2"]
+    rd: "65000:2"
+    description: "CHEMICAL ENGINEERING FIRM"
+    route_targets:
+      import:
+        - "65000:2"
+        - "65000:3"
+      export:
+        - "65000:2"
+        - "65000:4"
+
+  - name: CHEM_MGMT
+    devices: ["R1"]
+    rd: "65000:3"
+    description: "CHEMICAL ENGINEERING MANAGER"
+    route_targets:
+      import:
+        - "65000:4"
+      export:
+        - "65000:3"
